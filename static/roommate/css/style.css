@@ -1,0 +1,40 @@
+.border-secondary.card {
+    border: none;
+    background-color: transparent;
+}
+
+.border-secondary.card .card-body {
+    border-radius: 10px;
+    background-color: white
+}
+
+.border-secondary.card .card-header {
+    border: none
+}
+
+.form-control {
+    border-style: solid;
+    border-color: #e0e0e0;
+    border-width: 0px 0px 1px 0px;
+}
+
+.theme-color {
+    color: #17a2b8
+}
+
+.card-body a:hover {
+    color: #17a2b8
+}
+
+.bg-info {
+    background-color: #009688!important;
+}
+
+.bg-info a {
+    color: #009688;
+    font-size: 1rem
+}
+
+.bg-info a:hover {
+    color: #009688;
+}

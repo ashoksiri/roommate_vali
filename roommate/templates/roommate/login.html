@@ -1,0 +1,54 @@
+ {% extends 'base.html' %} {% block content%}
+
+
+<div class="container py-5">
+    <div class="row">
+        <div class="col-md-12">
+
+            <div class="row">
+                <div class="col-md-6 mx-auto">
+                    <div class="card border-secondary">
+                        <div class="card-header text-center bg-info">
+                            <span class="mb-5" style="font-size:50px;color:white"><i class="fa fa-lg fa-fw fas fa-user-circle"></i></span>
+                            <br>
+                            <span class="mb-5" style="font-size:20px;color:white">Login</i></span>
+                        </div>
+
+
+                        <div class="card-body">
+                            <form class="form" role="form" autocomplete="off" method="post">
+                                {% csrf_token %} {% include 'roommate/includes/bs4_form.html' with form=form %} {% if warning %}
+                                <div class="alert alert-warning" role="alert">
+                                    <strong>{{warning}}</strong>
+                                </div>
+                                {% endif%} {% if error %}
+                                <div class="alert alert-danger" role="alert">
+                                    <strong>{{error}}</strong>
+                                </div>
+                                {% endif%}
+                                <div class="form-group text-center">
+                                    <button type="submit" class="btn btn-md bg-info" style="color:white;">
+                                        <i class="fa fa-sign-in fa-lg fa-fw"></i>
+                                        Login
+                                    </button>
+                                </div>
+                            </form>
+                            <a href="{% url 'register' %}" class="card-link bg-info-a"><strong> Don't have an Account ? </strong></a>
+                            <a href="{% url 'forgot_password' %}" class="card-link bg-info-a"><strong> Forgot Password ? </strong></a>
+                            <div class="m-t-20 text-center">
+                                <strong>OR</strong><br>
+                                <a href="#"><span class="mb-5" style="font-size:20px;color:#3b5998"><i class="fa fa-lg fa-fw fas fa-facebook-f"></i></span></a>
+                                <a href="#"><span class="mb-5" style="font-size:20px;color:skyblue"><i class="fa fa-lg fa-fw fas fa-google"></i></span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--/row-->
+
+        </div>
+        <!--/col-->
+    </div>
+    <!--/row-->
+</div>
+{% endblock %}

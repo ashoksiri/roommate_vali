@@ -1,0 +1,54 @@
+{% load i18n static %}
+<!DOCTYPE html> {% get_current_language as LANGUAGE_CODE %}{% get_current_language_bidi as LANGUAGE_BIDI %}
+<html lang="{{ LANGUAGE_CODE|default:" en-us " }}" {% if LANGUAGE_BIDI %}dir="rtl" {% endif %} ng-app="roommate">
+
+
+<head>
+    <title>Roommate</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+
+    <!-- Twitter meta-->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:site" content="@pratikborsadiya">
+    <meta property="twitter:creator" content="@pratikborsadiya">
+    <!-- Open Graph Meta-->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Vali Admin">
+    <meta property="og:title" content="Vali - Free Bootstrap 4 admin theme">
+    <meta property="og:url" content="http://pratikborsadiya.in/blog/vali-admin">
+    <meta property="og:image" content="http://pratikborsadiya.in/blog/vali-admin/hero-social.png">
+    <meta property="og:description" content="Vali is a responsive and free admin theme built with Bootstrap 4, SASS and PUG.js. It's fully customizable and modular.">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="/static/roommate/css/main.css">
+    <link rel="stylesheet" href="/static/roommate/css/loader.css">
+    <link rel="stylesheet" href="/static/roommate/css/font-awesome.min.css">
+    <!-- <link rel="stylesheet" href="/static/roommate/css/style.css"> -->
+    <link rel="icon" type="image/png" href="https://tbncdn.freelogodesign.org/65082326-ceb3-4cff-a765-441d184ddffb.png?1518936676782" />
+</head>
+
+<body class="bg-info">
+    <div class="bar" style="width: 300px;
+    height: 20px;
+    z-index: 15;
+    top: 70%;
+    left: 50%;"></div>
+
+
+    {% block content %} {% endblock %}
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="/static/roommate/js/jquery.min.js"></script>
+    <script src="/static/roommate/js/popper.min.js"></script>
+    <script src="/static/roommate/js/bootstrap.min.js"></script>
+    <script src="/static/roommate/js/pace.min.js"></script>
+    <script type="text/javascript" src="/static/roommate/js/chart.js"></script>
+    <script src="/static/roommate/js/bootstrap-datepicker.min.js"></script>
+    <script src="/static/roommate/js/angular.min.js"></script>
+    <script src="/static/roommate/js/roommate.js"></script>
+</body>
+
+</html>

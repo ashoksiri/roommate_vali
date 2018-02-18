@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<!--[if IE 9 ]><html class="ie9"><![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Room Mate</title>
+    {% load static %}
+    <!-- Vendor CSS -->
+    <link href="{% static 'roommate/css/animate.min.css' %}" rel="stylesheet">
+    <link href="{% static 'roommate/css/palette.css' %}" rel="stylesheet">
+    <link href="{% static 'roommate/css/material-design-iconic-font.min.css' %}" rel="stylesheet">
+
+    <!-- CSS -->
+    <link href="{% static 'roommate/css/app.min.1.css' %}" rel="stylesheet">
+    <link href="{% static 'roommate/css/app.min.2.css' %}" rel="stylesheet">
+    <!-- <link href="{% static 'roommate/css/bootstrap.min.css' %}" rel="stylesheet"> -->
+
+</head>
+
+<body>
+    {% block content%} {% endblock%}
+    <script src="{% static 'roommate/js/jquery.min.js' %}"></script>
+    <script src="{% static 'roommate/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'roommate/js/waves.min.js' %}"></script>
+    <script src="{% static 'roommate/js/functions.js' %}"></script>
+    <script>
+        (function() {
+            $(document).on("ready", function() {
+                $("label").addClass("fg-lable");
+            });
+        })();
+    </script>
+</body>
+
+</html>

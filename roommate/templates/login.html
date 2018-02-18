@@ -1,0 +1,92 @@
+{% extends 'base.html' %} {% block content %}
+<section class="material-half-bg">
+    <div class="cover"></div>
+</section>
+<section class="login-content" ng-controller="loginController" style="display:none">
+    <div class="logo">
+        <h1>[[ title ]]</h1>
+    </div>
+    <div class="login-box">
+        <form class="login-form" name="loginForm" ng-submit="login(credentials)">
+            <h3 class="login-head"><i class="fa fa-lg fa-fw fa-user"></i>SIGN IN</h3>
+            <div class="form-group">
+                <label class="control-label">USERNAME</label>
+                <input class="form-control" type="text" name="email" placeholder="Email" autofocus ng-model="credentials.username" ng-required="true" ng-pattern="/^[a-zA-Z .]*$/" ng-minlength="4" ng-maxlength="8">
+                <span class="alert alert-danger" ng-if="loginForm.email.$error.pattern">
+                    Alphabets only.
+                </span>
+            </div>
+            <div class="form-group">
+                <label class="control-label">PASSWORD</label>
+                <input class="form-control" type="password" placeholder="Password" ng-model="credentials.password" ng-required="true">
+            </div>
+            <div class="form-group">
+                <div class="utility">
+                    <div class="animated-checkbox">
+                        <label>
+                  <input type="checkbox"><span class="label-text">Stay Signed in</span>
+                </label>
+                    </div>
+
+                </div>
+            </div>
+            <div class="form-group text-right">
+                <p class="semibold-text mb-2"><a href="#">Forgot Password ?</a></p>
+                <p class="semibold-text mb-2"><a href="#" data-toggle="flip">Register</a></p>
+            </div>
+
+            <div class="form-group btn-container">
+                <button class="btn btn-primary btn-block" type="submit" ng-disabled="loginForm.$invalid">
+                    <i class="fa fa-sign-in fa-lg fa-fw"></i>SIGN IN &nbsp;<i id="login-spinner" class=""></i></button>
+
+            </div>
+        </form>
+        <div class="forget-form" action="{% url 'register' %}" method="post">
+            <h3 class="login-head"><i class="fa fa-lg fa-fw fa-user"></i>Register</h3>
+            <div class="form-group">
+                <label class="control-label">EMAIL</label>
+                <input class="form-control" type="text" placeholder="Email" name="username">
+            </div>
+            <div class="form-group">
+                <label class="control-label">Password</label>
+                <input class="form-control" placeholder="password" type="password" name="password1">
+            </div>
+            <div class="form-group">
+                <label class="control-label">Repeat Password</label>
+                <input class="form-control" type="text" placeholder="confirm Password" type="password" name="password2">
+            </div>
+            <div class="form-group text-right">
+                <p class="semibold-text mb-2"><a href="#" data-toggle="flip">Already have Account ?</a></p>
+            </div>
+            <div class="form-group btn-container">
+                <button class="btn btn-primary btn-block"><i class="fa fa-user-plus fa-lg fa-fw"></i>Register</button>
+            </div>
+            <!-- <div class="form-group mt-3">
+                <p class="semibold-text mb-0"><a href="#login-form" data-toggle="flip"><i class="fa fa-angle-left fa-fw"></i> Back to Login</a></p>
+            </div> -->
+        </div>
+
+    </div>
+
+</section>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var script = document.createElement('script');
+        script.type = 'text/javascript';
+        script.src = '/static/roommate/js/main.js';
+
+        $("body").append(script);
+
+        $('.login-content').show();
+        $('.bar').hide();
+
+        $('.login-box [data-toggle="flip"]').click(function() {
+            $('.login-box').toggleClass('flipped');
+            return false;
+        });
+    })
+</script>
+
+
+{% endblock %}
