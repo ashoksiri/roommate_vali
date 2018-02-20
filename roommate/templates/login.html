@@ -7,19 +7,23 @@
         <h1>[[ title ]]</h1>
     </div>
     <div class="login-box">
-        <form class="login-form" name="loginForm" ng-submit="login(credentials)">
+        <form class="login-form" name="loginForm" action="/accounts/login/" method="post">
+            {% csrf_token %}
             <h3 class="login-head"><i class="fa fa-lg fa-fw fa-user"></i>SIGN IN</h3>
             <div class="form-group">
                 <label class="control-label">USERNAME</label>
-                <input class="form-control" type="email" name="email" placeholder="Email" autofocus ng-model="credentials.username" ng-required="true" ng-minlength="4" ng-blur="validate_email(credentials)">
-                <span style="color:red" ng-if="loginForm.email.$error.email">
+                <input class="form-control" type="email" name="username" placeholder="Email" autofocus ng-model="credentials.username" ng-required="true" ng-minlength="4" ng-blur="validate_email(credentials)">
+                <span style="color:red" ng-if="loginForm.username.$error.email">
                     Not a valid email.
                 </span>
             </div>
             <div class="form-group">
                 <label class="control-label">PASSWORD</label>
-                <input class="form-control" type="password" placeholder="Password" ng-model="credentials.password" ng-required="true">
+                <input class="form-control" type="password" placeholder="Password" name="password" ng-model="credentials.password" ng-required="true">
             </div>
+            {% if warning %}
+            <span class="alert alert-warning"> {{ warning }}</span> {% endif%} {% if error %}
+            <span class="alert alert-danger"> {{ error }}</span> {% endif%}
             <div class="form-group">
                 <div class="utility">
                     <div class="animated-checkbox">
@@ -36,47 +40,52 @@
             </div>
 
             <div class="form-group btn-container">
-                <button class="btn btn-primary btn-block" type="submit" ng-disabled="loginForm.$invalid">
+                <button class="btn btn-primary btn-block" type="submit" ng-disabled="loginForm.$invalid" id="login-btn">
                     <i class="fa fa-sign-in fa-lg fa-fw"></i>SIGN IN &nbsp; &nbsp;<i id="login-spinner-login" ></i></button>
 
             </div>
         </form>
-        <form class="forget-form" ng-submit="register(credentials)" name="registerForm">
+        <form class="forget-form" name="registerForm" action="{% url 'register' %}" method="post">
+            {% csrf_token %}
             <h3 class="login-head"><i class="fa fa-lg fa-fw fa-user"></i>Register</h3>
             <div class="form-group">
                 <label class="control-label">EMAIL</label>
-                <input class="form-control" type="email" placeholder="Email" name="username" ng-model="credentials.username">
+                <input class="form-control" type="email" placeholder="Email" name="username" ng-model="new.username" ng-required="true">
                 <span style="color:red" ng-if="registerForm.username.$error.email">
                     Please Provide Email.
                 </span>
             </div>
             <div class="form-group">
                 <label class="control-label">Password</label>
-                <input class="form-control" placeholder="password" type="password" name="password1" ng-model="credentials.password1">
+                <input class="form-control" type="password" placeholder="Password" name="password" ng-model="new.password" ng-required="true" ng-minlength="6">
             </div>
             <div class="form-group">
                 <label class="control-label">Repeat Password</label>
-                <input class="form-control" type="text" placeholder="confirm Password" type="password" name="password2" ng-model="credentials.password2">
-                <span style="color:red" ng-if="registerForm.password1 != registerForm.password2">
-
-                    password doesn't match....
-                </span>
+                <input class="form-control" type="password" placeholder="confirm Password" name="confirmPassword" ng-model="new.confirmPassword" ng-required="true" ng-minlength="6">
+                <span style="color: red" ng-if="passwordMatch">
+                    passwords doesn't match
+                    
+                </span> {% if error %}
+                <span class="alert alert-danger"> {{ error }}</span> {% endif%}
             </div>
             <div class="form-group text-right">
                 <p class="semibold-text mb-2"><a href="#" data-toggle="flip">Already have Account ?</a></p>
             </div>
             <div class="form-group btn-container">
-                <button class="btn btn-primary btn-block" type="submit" ng-disabled="registerForm.$invalid"><i class="fa fa-user-plus fa-lg fa-fw"></i>Register &nbsp; &nbsp;<i id="login-spinnerregister" class=""></i></button>
+                <button class="btn btn-primary btn-block" id="register-form-btn" type="submit" ng-disabled="registerForm.$invalid"><i class="fa fa-user-plus fa-lg fa-fw"></i>Register &nbsp; &nbsp;<i id="login-spinnerregister" class=""></i></button>
             </div>
-            <!-- <div class="form-group mt-3">
-                <p class="semibold-text mb-0"><a href="#login-form" data-toggle="flip"><i class="fa fa-angle-left fa-fw"></i> Back to Login</a></p>
-            </div> -->
         </form>
 
     </div>
 
 </section>
-
+{% if register %}
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        $('.login-box').toggleClass('flipped');
+    });
+</script>
+{% endif %}
 <script>
     document.addEventListener('DOMContentLoaded', function() {
         var script = document.createElement('script');
@@ -92,7 +101,16 @@
             $('.login-box').toggleClass('flipped');
             return false;
         });
-    })
+        $('.alert-danger').fadeOut(3000);
+        $('.alert-warning').fadeOut(3000);
+        $('#register-form-btn').click(function() {
+            $('#login-spinner-egister').removeClass().addClass('fa fa-spinner fa-spin');
+        });
+        $('#login-form-btn').click(function() {
+            $('#login-spinner-login').removeClass().addClass('fa fa-spinner fa-spin');
+        });
+
+    });
 </script>
 
 
