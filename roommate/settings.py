@@ -172,3 +172,36 @@ STATICFILES_DIRS = [
 # LOGIN_URL = '/'
 
 # LOGIN_REDIRECT_URL = '/'
+
+
+
+LOGGING = {
+    'disable_existing_loggers': False,
+    'version': 1,
+    'formatters': {
+        'verbose': {
+            'format': '%(asctime)s  - %(name)s - %(lineno)d - %(levelname)s - %(message)s'
+        },
+        'simple': {
+            'format': '%(asctime)s  - %(name)s - %(lineno)d - %(levelname)s - %(message)s'
+        },
+        "coloredlogs": {
+            "()": "coloredlogs.ColoredFormatter",
+            "fmt": '%(asctime)s  - %(name)s - %(lineno)d - %(levelname)s - %(message)s'
+        },
+    },
+    'handlers': {
+        'console': {
+            'class': 'logging.StreamHandler',
+            'level': 'INFO',
+            'formatter':'coloredlogs',
+        }
+    },
+    'loggers': {
+        '': {
+            'handlers': ['console'],
+            'level': 'DEBUG',
+            'propagate': False,
+        }
+    },
+}
