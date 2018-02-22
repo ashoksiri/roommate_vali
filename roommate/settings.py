@@ -138,20 +138,20 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR,'static')
 ]
 
-# REST_FRAMEWORK = {
-#
-#     'DEFAULT_AUTHENTICATION_CLASSES': (
-#         'oauth2_provider.contrib.rest_framework.OAuth2Authentication',
-#     ),
-#
-#     'DEFAULT_PERMISSION_CLASSES': (
-#         'rest_framework.permissions.IsAuthenticated',
-#     ),
-#     'DEFAULT_RENDERER_CLASSES': (
-#                 'rest_framework.renderers.JSONRenderer',
-#                 #'rest_framework.renderers.BrowsableAPIRenderer',
-#             )
-# }
+REST_FRAMEWORK = {
+
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'oauth2_provider.contrib.rest_framework.OAuth2Authentication',
+    ),
+
+    'DEFAULT_PERMISSION_CLASSES': (
+        'rest_framework.permissions.IsAuthenticated',
+    ),
+    'DEFAULT_RENDERER_CLASSES': (
+                'rest_framework.renderers.JSONRenderer',
+                #'rest_framework.renderers.BrowsableAPIRenderer',
+            )
+}
 
 # AUTHENTICATION_BACKENDS = (
 #     'social_core.backends.github.GithubOAuth2',

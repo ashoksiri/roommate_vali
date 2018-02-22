@@ -81,7 +81,7 @@ class LoginView(CreateAPIView):
         data['grant_type'] = Application.GRANT_PASSWORD
         data['client_id'] = a.client_id
         data['client_secret'] = a.client_secret
-        data['statuc_code'] = 200
+        data['status_code'] = 200
         data['user_type'] = 'admin' if user.is_staff else 'user'
 
         return Response(data=data,status=status.HTTP_200_OK)

@@ -28,7 +28,7 @@ urlpatterns = [
     url(r'',include('accounts.urls')),
     url(r'^$',TemplateView.as_view(template_name='login.html'),name='login'),
     url(r'^admin/', admin.site.urls),
-
+    url(r'^accounts/o/', include('oauth2_provider.urls', namespace='oauth2_provider')),
     # url(r'^oauth/', include('social_django.urls', namespace='social')),  # <--
     # url(r'^$', account_views.home, name='home'),
     # url(r'^accounts/logout/$', auth_views.logout, {'next_page': 'login'}, name='logout'),
