@@ -38,7 +38,26 @@
     left: 50%;"></div>
 
 
-    {% block content %} {% endblock %}
+
+    {% block content %}
+    <div ng-controller="loginController">
+        <div ng-if="loginStatus" ng-include="'/static/roommate/views/header/header.view.html'">
+            <main class="app-content">
+
+                <ui-view></ui-view>
+            </main>
+        </div>
+        <div ng-if="!loginStatus">
+
+
+            <ui-view></ui-view>
+
+        </div>
+    </div>
+
+    {% endblock %}
+
+
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="/static/roommate/js/jquery.min.js"></script>

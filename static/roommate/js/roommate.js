@@ -22,10 +22,16 @@
                 url: '/main',
                 templateUrl: '/static/roommate/views/mail/mail.view.html',
                 controller: 'mailController'
+            }).state({
+                name: 'login',
+                url: '/login',
+                templateUrl: '/static/roommate/views/login/login.view.html',
+                controller: 'loginController'
             })
 
         }).controller('loginController', function($scope, $http) {
             $scope.title = "Room Mate";
+            $scope.loginStatus = true;
             $scope.login = function(data) {
                 console.log(data);
                 $('#login-spinner-login').removeClass().addClass('fa fa-spinner fa-spin');
