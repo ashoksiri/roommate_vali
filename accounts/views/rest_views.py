@@ -49,10 +49,10 @@ class LoginView(CreateAPIView):
 
     def create(self, request, *args, **kwargs):
 
-        username = request.data['username']
+        username = request.data['email']
         password = request.data['password']
 
-        user = authenticate(username=username, password=password)
+        user = authenticate(email=username, password=password)
 
         if user is not None:
             if user.is_active:
@@ -76,16 +76,15 @@ class LoginView(CreateAPIView):
                                            name=user.username)
 
         data= {}
-        data['username'] = user.username
+        data['username'] = user.email
         data['user_id'] = user.id
         data['grant_type'] = Application.GRANT_PASSWORD
         data['client_id'] = a.client_id
         data['client_secret'] = a.client_secret
-        data['display_name'] = user.first_name + ' ' + user.last_name
         data['statuc_code'] = 200
         data['user_type'] = 'admin' if user.is_staff else 'user'
 
-        return Response(data=data,status=status.HTTP_200_OK,template_name='login.html')
+        return Response(data=data,status=status.HTTP_200_OK)
 
 
 

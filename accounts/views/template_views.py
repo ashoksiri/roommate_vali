@@ -23,7 +23,7 @@ def call_user_status(sender, user, request, **kwargs):
             Application.objects.create(user=user,
                                    client_type=Application.CLIENT_CONFIDENTIAL,
                                    authorization_grant_type=Application.GRANT_PASSWORD,
-                                   name=user.username)
+                                   name=user.email)
 
 @login_required
 def home(request):
