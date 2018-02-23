@@ -153,6 +153,10 @@ REST_FRAMEWORK = {
             )
 }
 
+OAUTH2_PROVIDER = {
+    'OAUTH2_BACKEND_CLASS': 'oauth2_provider.oauth2_backends.JSONOAuthLibCore',
+}
+
 # AUTHENTICATION_BACKENDS = (
 #     'social_core.backends.github.GithubOAuth2',
 #     'social_core.backends.twitter.TwitterOAuth',

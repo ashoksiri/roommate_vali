@@ -2,7 +2,7 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth import login, authenticate , logout
 from django.core.exceptions import ObjectDoesNotExist
 from django.shortcuts import render, redirect
-from django.contrib.auth.models import User
+from ..models import User
 from django.contrib.auth.signals import user_logged_in
 from django.dispatch import receiver
 from datetime import datetime
@@ -64,7 +64,7 @@ def register_view(request):
             user_data['username'] = email
             user_data['email'] = email
             user_data['password'] = password
-            User._default_manager.db_manager().create_user(**user_data)
+            User.objects._create_user(**user_data)
             user = authenticate(username=email,password=password)
             if user:
                 login(request, user)
