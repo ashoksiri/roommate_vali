@@ -1,0 +1,1 @@
+from socialapis.newsapi.newsapi import news

@@ -1,0 +1,212 @@
+{
+  "coordinates": null,
+  "in_reply_to_status_id": null,
+  "lang": "und",
+  "is_quote_status": false,
+  "retweeted": false,
+  "place": null,
+  "metadata": {
+    "result_type": "recent",
+    "iso_language_code": "und"
+  },
+  "user": {
+    "follow_request_sent": false,
+    "description": "#Gowdru.\nI'm Big Fan Of\n#Box_Office_Sultan, #ಕರುನಾಡ_ದಳಪತಿ,\n#Challenging_Star, @dasadarshan Boss.\nCricket @msDhoni\n#WWE @JohnCena, @WWERomanReigns",
+    "profile_link_color": "1DA1F2",
+    "has_extended_profile": true,
+    "default_profile": true,
+    "lang": "en",
+    "url": "",
+    "profile_sidebar_fill_color": "DDEEF6",
+    "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+    "protected": false,
+    "geo_enabled": false,
+    "profile_use_background_image": true,
+    "friends_count": 110,
+    "default_profile_image": false,
+    "followers_count": 3244,
+    "time_zone": null,
+    "profile_image_url_https": "https://pbs.twimg.com/profile_images/971752640332926977/ayx5dPhE_normal.jpg",
+    "statuses_count": 23768,
+    "name": "Sanju Gaja 🐘",
+    "notifications": false,
+    "profile_sidebar_border_color": "C0DEED",
+    "profile_image_url": "http://pbs.twimg.com/profile_images/971752640332926977/ayx5dPhE_normal.jpg",
+    "translator_type": "none",
+    "contributors_enabled": false,
+    "verified": false,
+    "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+    "profile_text_color": "333333",
+    "listed_count": 1,
+    "screen_name": "SanjuGaja1",
+    "is_translation_enabled": false,
+    "is_translator": false,
+    "following": false,
+    "created_at": "2015-09-15 18:19:50",
+    "entities": {
+      "description": {
+        "urls": []
+      }
+    },
+    "profile_background_color": "C0DEED",
+    "location": "ಮಂಡ್ಯ ಹೈದ,  ಹಳ್ಳಿ ಹುಡುಗ ",
+    "id_str": "3666547102",
+    "profile_banner_url": "https://pbs.twimg.com/profile_banners/3666547102/1520064349",
+    "profile_background_tile": false,
+    "favourites_count": 108386,
+    "utc_offset": null
+  },
+  "in_reply_to_user_id": null,
+  "text_parsed": "RT @moviemantraa:ಶಾಲಾ ಸ್ನೇಹಿತರಿಂದ ಡಿ ಬಾಸ್ ಗೆ ದೊರೆತ ಅಪೂರ್ವ ಕಾಣಿಕೆ Darshan Thoogudeepa Srinivas Srujan Lokesh #MovieMantra\n\nhttps://t.co/J1k…",
+  "contributors": null,
+  "geo": null,
+  "favorite_count": 0,
+  "text": "RT @moviemantraa: ಶಾಲಾ ಸ್ನೇಹಿತರಿಂದ ಡಿ ಬಾಸ್ ಗೆ ದೊರೆತ ಅಪೂರ್ವ ಕಾಣಿಕೆ Darshan Thoogudeepa Srinivas Srujan Lokesh #MovieMantra\n\nhttps://t.co/J1k…",
+  "created_at": "2018-03-09 06:58:29",
+  "retweet_count": 6,
+  "entities": {
+    "symbols": [],
+    "user_mentions": [
+      {
+        "name": "MovieMantra Official",
+        "id": 3953478614,
+        "indices": [
+          3,
+          16
+        ],
+        "screen_name": "moviemantraa",
+        "id_str": "3953478614"
+      }
+    ],
+    "urls": [],
+    "hashtags": [
+      {
+        "indices": [
+          109,
+          121
+        ],
+        "text": "MovieMantra"
+      }
+    ]
+  },
+  "source": "<a href=\"http://twitter.com/download/android\" rel=\"nofollow\">Twitter for Android</a>",
+  "in_reply_to_screen_name": null,
+  "in_reply_to_user_id_str": null,
+  "id_str": "972003672853917696",
+  "favorited": false,
+  "in_reply_to_status_id_str": null,
+  "retweeted_status": {
+    "coordinates": null,
+    "in_reply_to_status_id": null,
+    "lang": "und",
+    "is_quote_status": false,
+    "retweeted": false,
+    "metadata": {
+      "result_type": "recent",
+      "iso_language_code": "und"
+    },
+    "user": {
+      "follow_request_sent": false,
+      "description": "Get latest news in Kannada Film industry. Entertainment, Information and some fun for all the Kannada movie buffs",
+      "profile_link_color": "FF691F",
+      "has_extended_profile": true,
+      "default_profile": false,
+      "lang": "en",
+      "url": "https://t.co/rKnaRlMieq",
+      "profile_sidebar_fill_color": "000000",
+      "profile_background_image_url": "http://abs.twimg.com/images/themes/theme16/bg.gif",
+      "protected": false,
+      "geo_enabled": true,
+      "profile_use_background_image": true,
+      "friends_count": 16,
+      "default_profile_image": false,
+      "followers_count": 6532,
+      "time_zone": "Pacific Time (US & Canada)",
+      "profile_image_url_https": "https://pbs.twimg.com/profile_images/878675696855404544/9w99NW1f_normal.jpg",
+      "statuses_count": 10077,
+      "name": "MovieMantra Official",
+      "notifications": false,
+      "profile_sidebar_border_color": "000000",
+      "profile_image_url": "http://pbs.twimg.com/profile_images/878675696855404544/9w99NW1f_normal.jpg",
+      "translator_type": "none",
+      "contributors_enabled": false,
+      "verified": false,
+      "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme16/bg.gif",
+      "profile_text_color": "000000",
+      "listed_count": 12,
+      "screen_name": "moviemantraa",
+      "is_translation_enabled": false,
+      "is_translator": false,
+      "following": false,
+      "created_at": "Tue Oct 20 02:44:42 +0000 2015",
+      "entities": {
+        "url": {
+          "urls": [
+            {
+              "expanded_url": "http://www.moviemantraa.com",
+              "url": "https://t.co/rKnaRlMieq",
+              "display_url": "moviemantraa.com",
+              "indices": [
+                0,
+                23
+              ]
+            }
+          ]
+        },
+        "description": {
+          "urls": []
+        }
+      },
+      "profile_background_color": "9AE4E8",
+      "location": "India",
+      "id_str": "3953478614",
+      "profile_banner_url": "https://pbs.twimg.com/profile_banners/3953478614/1499179796",
+      "id": 3953478614,
+      "profile_background_tile": false,
+      "favourites_count": 4627,
+      "utc_offset": -28800
+    },
+    "in_reply_to_user_id": null,
+    "contributors": null,
+    "geo": null,
+    "favorite_count": 66,
+    "possibly_sensitive": false,
+    "text": "ಶಾಲಾ ಸ್ನೇಹಿತರಿಂದ ಡಿ ಬಾಸ್ ಗೆ ದೊರೆತ ಅಪೂರ್ವ ಕಾಣಿಕೆ Darshan Thoogudeepa Srinivas Srujan Lokesh #MovieMantra… https://t.co/XOhS1guaJX",
+    "created_at": "Tue Mar 06 15:58:36+0000 2018",
+    "retweet_count": 6,
+    "entities": {
+      "symbols": [],
+      "user_mentions": [],
+      "urls": [
+        {
+          "expanded_url": "https://twitter.com/i/web/status/971052437250359296",
+          "url": "https://t.co/XOhS1guaJX",
+          "display_url": "twitter.com/i/web/status/9…",
+          "indices": [
+            105,
+            128
+          ]
+        }
+      ],
+      "hashtags": [
+        {
+          "indices": [
+            91,
+            103
+          ],
+          "text": "MovieMantra"
+        }
+      ]
+    },
+    "source": "<a href=\"http://twitter.com/download/iphone\" rel=\"nofollow\">Twitter for iPhone</a>",
+    "in_reply_to_screen_name": null,
+    "in_reply_to_user_id_str": null,
+    "id_str": "971052437250359296",
+    "id": 971052437250359300,
+    "favorited": false,
+    "in_reply_to_status_id_str": null,
+    "place": null,
+    "truncated": true
+  },
+  "truncated": false
+}
